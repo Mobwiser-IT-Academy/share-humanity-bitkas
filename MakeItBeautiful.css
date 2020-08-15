@@ -1,0 +1,61 @@
+.head {
+	display:flex;
+	justify-content: center;
+}
+body {
+	background-color: rgb(245, 228, 225);
+	color: rgb(82, 27, 17);
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+h5 {
+	
+}
+.menu {
+	width: 100%;
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.menu p {
+	order:-1;
+}
+
+#unica {
+	width:80%;
+	height:100%;
+	margin-right:10%;
+	
+	display:flex;
+	flex-direction: row;
+}
+
+.subcorpo {
+	display:flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	border-left: 2px solid red;
+    background-color: #ccccb3;
+	height: 250px;
+	margin-left: 20px;
+}
+	
+/*.corpo div {
+	display:inline;
+	width:40%;
+	height:40%;
+	border: dotted;
+}
+*/
+.conteudo {
+	height:1px;
+}
+
+#foot {
+	margin-left: 45%;
+}
