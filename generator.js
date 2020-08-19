@@ -14,27 +14,41 @@ let extremePoverty = {
 	rank: "second"
 };
 
-let path = window.location.pathname;
-let page = path.split("/").pop();
-if(page == "LHGI.html") {
-let ls = [climate, extremePoverty];
-for(var i = 0; i<ls.length; i++) {
-	let sec = document.createElement("section");
+let currentWindow = window.location.pathname;
+let page = currentWindow.split("/").pop();
+if(page == "humanitariumIssues.html") {
+let globalIssues = [climate, extremePoverty];
+for(var i = 0; i<globalIssues.length; i++) {
+	/*let sec = document.createElement("section");
 	let h3 = document.createElement("h3");
-	let h41 = document.createElement("h4");
-	let p1 = document.createElement("p");
-	let h42 = document.createElement("h4");
-	let p2 = document.createElement("p");
+	let firstH4 = document.createElement("h4");
+	let firstP = document.createElement("p");
+	let secondH4 = document.createElement("h4");
+	let secondP = document.createElement("p");
 	sec.classList.add("subcorpo");
 	h3.classList.add("conteudo");
-	let a = document.createTextNode(ls[i].nome);
-	h3.appendChild(a);
+	let textH3 = document.createTextNode(globalIssues[i].nome);
+	h3.appendChild(textH3);
 	sec.appendChild(h3);
-	h41.classList.add("conteudo");
-	let b = document.createTextNode("People Afected:");
-	h41.appendChild(b);
-	sec.appendChild(h41);
+	firstH4.classList.add("conteudo");
+	let textFirstH4 = document.createTextNode("People Afected:");
+	firstH4.appendChild(textFirstH4);
+	sec.appendChild(firstH4);
 	document.getElementById("unica").appendChild(sec);
+}*/ console.log("here");
+	let sec = document.createElement("section");
+	sec.classList.add("subCorpo");
+	document.getElementById("unica").appendChild(sec);
+	const markup = {tag:'<h3 class="conteudo">' + 
+							globalIssues[i].nome + 
+						' </h3>' +
+						'<h4 class="conteudo">People Afected:</h4>'};
+	sec.outerHTML = markup.tag;
+
+	//let node = document.createElement(markup.tag);
+	//document.getElementById("").innerHTML = markup;
+	document.getElementById("unica").appendChild(sec);
+		
 }
 }
 function myFunction(parentId) {
