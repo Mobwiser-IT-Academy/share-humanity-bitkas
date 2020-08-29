@@ -28,6 +28,16 @@ h3 {
 	order:-1;
 }
 
+#unica {
+	width:80%;
+	height:100%;
+	margin-right:10%;
+	
+	display:flex;
+	flex-direction: row;
+	background-image: url(humanitariumImage.jpg);
+}
+
 .container {
 	width:80%;
 	height:100%;
