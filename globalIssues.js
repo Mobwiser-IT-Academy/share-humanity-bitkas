@@ -13,3 +13,5 @@ let extremePoverty = {
 	description: "Extreme poverty and inequality continue to leave whole communities and households in an almost irreversibly devastating state of vulnerability and need",
 	rank: "second"
 };
+
+let globalIssues = [climate, extremePoverty];
