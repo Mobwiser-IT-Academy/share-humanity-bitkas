@@ -1,3 +1,7 @@
-let height = document.getElementById('climateChange').clientHeight;
-//var children = document.getElementById('climateChange').childNodes
-document.getElementById('unica').style.height=((2*height)+40);
+let children = document.getElementById('unica').lastElementChild;
+let father = document.getElementById('unica');
+let fatherPosition = father.getBoundingClientRect();
+let lastChildrenPosition = children.getBoundingClientRect();
+let firstPosition = lastChildrenPosition.top-fatherPosition.top;
+let secondPosition = children.height;
+document.getElementById('unica').style.height=(firstPosition+secondPosition);
