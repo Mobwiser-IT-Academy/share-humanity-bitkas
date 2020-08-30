@@ -32,10 +32,14 @@ h3 {
 	width:80%;
 	height:100%;
 	margin-right:10%;
-	
+	/*overflow: auto;*/
 	display:flex;
 	flex-direction: row;
 	background-image: url(humanitariumImage.jpg);
+	/*background-size: cover;*/
+	/*height: max-content;*/
+	border-style: solid;
+	border-width: 8px; 
 }
 
 .container {
