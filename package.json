@@ -4,7 +4,9 @@
   "description": "aim for the top!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "npx prettier --write .",
+    "eslint" : "npx eslint ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/Mobwiser-IT-Academy/share-humanity-bitkas/issues"
   },
-  "homepage": "https://github.com/Mobwiser-IT-Academy/share-humanity-bitkas#readme"
+  "homepage": "https://github.com/Mobwiser-IT-Academy/share-humanity-bitkas#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "eslint": "^7.8.1",
+    "eslint-config-google": "^0.14.0",
+    "prettier": "2.1.1",
+    "typescript": "4.0.2"
+  }
 }
