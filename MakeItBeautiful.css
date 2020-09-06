@@ -1,3 +1,4 @@
+
 .head {
   display: flex;
   justify-content: center;
@@ -5,14 +6,16 @@
 body {
   background-color: #ff944d;
   color: rgb(82, 27, 17);
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 }
+
 
 h3 {
   width: 100%;
   text-align: center;
   text-shadow: 1px 1px #ff751a;
 }
+
 .menu {
   width: 100%;
   display: inline-flex;
