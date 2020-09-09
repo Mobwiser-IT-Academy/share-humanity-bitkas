@@ -1,23 +1,19 @@
-/*let count = 0;
-let section = document.getElementsByClassName('subcorpo');
-for(let i = 0; i<section.length; i++) {
-    section[i].addEventListener("mouseover", bigger);
-    section[i].addEventListener("mouseout", smaller);
-}
+let filter = document.getElementById("submitFilter");
+filter.addEventListener("click", filterPage);
 
-function bigger() {
-    
-    //event.target.style.flexGrow = "2";
-    if(count == 0) {
-        event.target.style.transform = "rotate(10deg)";
-        let child =event.target.childNodes;
-        for(let i = 0; i<child.length;i++) {
-            child[i].style.transform = "rotate(10deg)";
-        }
-        count++;
-    }
+function filterPage() {
+    let target = document.getElementById("filter").value;
+    let filtered = globalIssuess.filter(x => x.nome==target);
+    document.getElementById("unica").innerHTML = "";
+    let bodyFiltered = `<h3 class="conteudo"> 
+        ${filtered[0].nome} </h3>
+        <h4 class="conteudo">People Afected:</h4>
+        <p class="conteudo">${filtered[0].afetados}</p>
+        <h4 class="conteudo">Rank of Priority:</h4>
+        <p class="conteudo">${filtered[0].rank}</p>`;
+    let sec = document.createElement("section");
+    sec.classList.add("subcorpo");
+    document.getElementById("unica").appendChild(sec);
+    sec.innerHTML = markup;
 }
-
-function smaller() {
-    //event.target.style.flexGrow="1";
-}*/
+   

@@ -28,7 +28,7 @@ rankClimate = 1;
 let climateChange = new GlobalIssues(nomeClimate, afetadosClimate, descriptionClimate, rankClimate);
 
 let nomePoverty : string;
-nomePoverty = "estreme Poverty";
+nomePoverty = "extreme Poverty";
 let afetadosPoverty : string;
 afetadosPoverty = "Half the world's population";
 let descriptionPoverty : string;
@@ -38,4 +38,4 @@ devastating state of vulnerability and need`;
 rankPoverty = 2;
 let poverty = new GlobalIssues(nomePoverty, afetadosPoverty, descriptionPoverty, rankPoverty);
 
-let globalIssuess : object = [climateChange, poverty];
+let globalIssuess : GlobalIssues[] = [climateChange, poverty];

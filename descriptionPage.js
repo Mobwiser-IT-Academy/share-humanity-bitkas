@@ -1,3 +1,4 @@
+/// <reference path="globalIssues.ts" />
 var path;
 var parentID;
 path = window.location.search;
