@@ -4,23 +4,14 @@ let path : string;
 let parentID : string;
 path = window.location.search;
 parentID = path.split('=').pop()!;
+for(let i = 0; i<globalIssues.length; i++) {
+    if(globalIssues[i].nome.trim() === parentID){
+        let description : string;
+        let sec = document.createElement("section");
+        sec.classList.add("subcorpo");
+        description = `<h4> ${globalIssues[i].nome}</h4>
+               <p> ${globalIssues[i].description}</p>`;
 
-switch(parentID) {
-    case "climateChange" :
-        choosePage(globalIssues[0]);
-        break;
-    case "extremePoverty":
-        choosePage(globalIssues[1]);
-        break;
-}
-
-function choosePage(page : GlobalIssue) : void {
-    let description : string;
-    let sec = document.createElement("section");
-	sec.classList.add("subcorpo");
-    description = `<h4> ${page.nome}</h4>
-                   <p> ${page.description}</p>`;
-
-    document.getElementById('detail')!.appendChild(sec);
-    sec.innerHTML = description;
-}
+        document.getElementById('detail')!.appendChild(sec);
+        sec.innerHTML = description;
+}}

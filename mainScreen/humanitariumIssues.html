@@ -25,70 +25,26 @@
     
 
     <div id="unica" class="container">
-      <section class="subCorpo" id="climateChange">
-        <h3 class="conteudo">Climate Change</h3>
-        <ul>
-          <li><h4 class="conteudo">People affected:</h4></li>
-        </ul>
-        <p class="conteudo">20 million</p>
-        <ul>
-          <li><h4 class="conteudo">Rank of Priority:</h4></li>
-        </ul>
-        <p class="conteudo">First!</p>
-        <p class="conteudo" onclick="myFunction(this.parentNode.id)">
-          Click Me!
-        </p>
-      </section>
-
-      <section class="subCorpo" id="extremePoverty">
-        <h3 class="conteudo">Poverty</h3>
-        <ul>
-          <li><h4 class="conteudo">People affected:</h4></li>
-        </ul>
-        <p class="conteudo">Half of earths's population</p>
-        <ul>
-          <li><h4 class="conteudo">Rank of Priority:</h4></li>
-        </ul>
-        <p class="conteudo">second!</p>
-        <p class="conteudo" onclick="myFunction(this.parentNode.id)">
-          Click Me!
-        </p>
-      </section>
-
-      <section class="subCorpo" id="climateChange">
-        <h3 class="conteudo">Hunger</h3>
-        <ul>
-          <li><h4 class="conteudo">People affected:</h4></li>
-        </ul>
-
-        <p class="conteudo">10%</p>
-        <ul>
-          <li><h4 class="conteudo">Rank of Priority:</h4></li>
-        </ul>
-        <p class="conteudo">Third!</p>
-        <p class="conteudo" onclick="myFunction(this.parentNode.id)">
-          Click Me!
-        </p>
-      </section>
-
-      <section class="subCorpo" id="extremePoverty">
-        <h3 class="conteudo">Test</h3>
-        <ul>
-          <li><h4 class="conteudo">People affected:</h4></li>
-        </ul>
-        <p class="conteudo">Half of earths's population</p>
-        <ul>
-          <li><h4 class="conteudo">Rank of Priority:</h4></li>
-        </ul>
-        <p class="conteudo">second!</p>
-        <p class="conteudo" onclick="myFunction(this.parentNode.id)">
-          Click Me!
-        </p>
-      </section>
+      
     </div>
 
-    <script type="text/javascript" src="../src/globalIssues.js"></script>
-    <script type="text/javascript" src="./src/generator.js"></script>
-    <script type="text/javascript" src="./src/events.js"></script>
+    <button type="button" id="testDatabase">testDatabase</button>
+    <script defer type="text/javascript" src="../dist/bundle1.js"></script>
+    <script defertype="text/javascript" src="../dist/bundleGlobalIssues.js"></script>
+    <script defertype="text/javascript" src="../dist/bundleGenerator.js"></script>
+    <script defer type="text/javascript" src="../src/events.js"></script>
+    
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+
+
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script defer src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
   </body>
 </html>
