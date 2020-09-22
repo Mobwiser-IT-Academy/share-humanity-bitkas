@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "npx prettier --write .",
     "eslint": "npx eslint .",
-    "program" : "start humanitariumIssues.html"
+    "build": "webpack",
+    "program": "start humanitariumIssues.html"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,9 @@
     "eslint": "^7.8.1",
     "eslint-config-google": "^0.14.0",
     "prettier": "2.1.1",
-    "typescript": "4.0.2"
+    "ts-loader": "^8.0.4",
+    "typescript": "4.0.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   }
 }
