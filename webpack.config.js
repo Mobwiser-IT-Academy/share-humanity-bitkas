@@ -1,12 +1,19 @@
 const path = require('path');
 
 module.exports = {
-    entry: './typescript/globalIssues.ts',
-    devtool: 'inline-source-map',
+    entry: './mainScreen/generator.ts',
+    devtool: 'inline-smainScreenource-map',
+    devServer: {
+        publicPath : '/dist/',
+        contentBase: './mainScreen',
+        index: './mainScreen/humanitariumIssues.html',
+        openPage: '/humanitariumIssues.html',
+        
+    },
     module : {
         rules: [
             {
-                test: /\tsx?$/,
+                test: /\.ts/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
