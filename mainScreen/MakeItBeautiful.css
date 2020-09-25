@@ -37,7 +37,7 @@ h3 {
   /*overflow: auto;*/
   display: flex;
   flex-direction: row;
-  background-image: url(humanitariumImage.jpg);
+  background-image: url(../img/humanitariumImage.jpg);
   background-size: cover;
   /*height: max-content;*/
   border-style: solid;

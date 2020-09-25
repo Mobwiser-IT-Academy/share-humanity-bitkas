@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+
     entry: './mainScreen/generator.ts',
     devtool: 'inline-smainScreenource-map',
     devServer: {
@@ -26,4 +27,5 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
+
 };
