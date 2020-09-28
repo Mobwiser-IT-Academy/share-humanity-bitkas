@@ -1,5 +1,5 @@
-import {globalIssues} from "./globalIssues";
-import {GlobalIssue} from "./globalIssues"; 
+import {globalIssues} from "../mainScreen/globalIssues";
+import {GlobalIssue} from "../mainScreen/globalIssues"; 
 let path : string;
 let parentID : string;
 path = window.location.search;

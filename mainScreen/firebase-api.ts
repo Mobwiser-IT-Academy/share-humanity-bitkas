@@ -1,4 +1,5 @@
 import * as firebase from 'firebase';
+import { GlobalIssue } from './globalIssues';
 
 
 class firebaseApi { 
@@ -23,11 +24,12 @@ class firebaseApi {
 
   static acessDatabase() {
       let firebaseObject = new firebaseApi();
-      let databaseStorage : Object[] = new Array(15);
+      let databaseStorage : GlobalIssue[] = new Array(15);
       firebaseObject.database.ref('/')
       .once('value').then(function(snapshot) {
           snapshot.forEach(function(child) {
-            let globalIssue : Object;
+            console.log();
+            let globalIssue : GlobalIssue;
             globalIssue = child.exportVal();
             databaseStorage.push(globalIssue);
           })

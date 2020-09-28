@@ -7,6 +7,7 @@ interface GlobalIssue {
     rank : number;
 
 }
-let globalIssues: Array<any> = firebaseApi.acessDatabase();
+let globalIssues: Array<GlobalIssue> = new Array(15);
+globalIssues =  firebaseApi.acessDatabase();
 export {GlobalIssue};
 export {globalIssues};
