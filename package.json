@@ -10,7 +10,6 @@
     "build": "webpack",
     "program": "start humanitariumIssues.html",
     "start": "webpack-dev-server --open"
-
   },
   "repository": {
     "type": "git",
@@ -29,7 +28,6 @@
     "eslint": "^7.8.1",
     "eslint-config-google": "^0.14.0",
     "prettier": "2.1.1",
-
     "ts-loader": "^8.0.4",
     "typescript": "4.0.2",
     "webpack": "^4.44.2",
@@ -38,6 +36,5 @@
   },
   "dependencies": {
     "firebase": "^7.20.0"
-
   }
 }

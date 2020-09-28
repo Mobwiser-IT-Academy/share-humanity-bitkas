@@ -1,3 +1,5 @@
+import { firebaseApi } from "./firebase-api";
+
 interface GlobalIssue {
     nome : string;
     afetados : string;
@@ -5,6 +7,6 @@ interface GlobalIssue {
     rank : number;
 
 }
-let globalIssues: Array<GlobalIssue> = new Array(10);
+let globalIssues: Array<any> = firebaseApi.acessDatabase();
 export {GlobalIssue};
 export {globalIssues};

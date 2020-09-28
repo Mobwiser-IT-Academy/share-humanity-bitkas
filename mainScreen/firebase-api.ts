@@ -1,6 +1,5 @@
 import * as firebase from 'firebase';
-import {GlobalIssue} from './globalIssues';
-import {globalIssues} from './globalIssues';
+
 
 class firebaseApi { 
   database;
@@ -24,26 +23,17 @@ class firebaseApi {
 
   static acessDatabase() {
       let firebaseObject = new firebaseApi();
+      let databaseStorage : Object[] = new Array(15);
       firebaseObject.database.ref('/')
       .once('value').then(function(snapshot) {
-          let globalIssue : GlobalIssue;
           snapshot.forEach(function(child) {
+            let globalIssue : Object;
             globalIssue = child.exportVal();
-            let sec = document.createElement("section");
-            sec.classList.add("subcorpo");
-            const markup : string =`<h3 class="conteudo"> 
-            ${globalIssue.nome} </h3>
-            <h4 class="conteudo">People Afected:</h4>
-            <p class="conteudo">${globalIssue.afetados}</p>
-            <h4 class="conteudo">Rank of Priority:</h4>
-            <p class="conteudo">${globalIssue.rank}</p>
-            <p class="conteudo" onclick="myFunction()">Descrição</p>`;
-            globalIssues.push(globalIssue);
-          document.getElementById("unica")!.appendChild(sec);
-          sec.innerHTML = markup;
+            databaseStorage.push(globalIssue);
           })
 
       });
+      return databaseStorage;
   }
 }
 

@@ -29,3 +29,18 @@ function filterPage() {
     document.getElementById("unica")!.appendChild(sec);
     sec.innerHTML = bodyFiltered;    
 }
+
+for(let i = 0; i<globalIssues.length; i++) {
+    let sec = document.createElement("section");
+            sec.classList.add("subcorpo");
+            const markup : string =`<h3 class="conteudo"> 
+            ${globalIssues[i].nome} </h3>
+            <h4 class="conteudo">People Afected:</h4>
+            <p class="conteudo">${globalIssues[i].afetados}</p>
+            <h4 class="conteudo">Rank of Priority:</h4>
+            <p class="conteudo">${globalIssues[i].rank}</p>
+            <p class="conteudo" onclick="myFunction()">Descrição</p>`;
+            
+          document.getElementById("unica")!.appendChild(sec);
+          sec.innerHTML = markup;
+}
