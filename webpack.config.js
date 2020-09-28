@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
 
-    entry: './mainScreen/generator.ts',
+    entry: './mainScreen/filter.ts',
     devtool: 'inline-smainScreenource-map',
     devServer: {
         publicPath : '/dist/',
