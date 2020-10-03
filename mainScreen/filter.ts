@@ -1,3 +1,4 @@
+import { firebaseApi } from "./firebase-api";
 import {globalIssues} from "./globalIssues";
 import {GlobalIssue}  from "./globalIssues";
 
@@ -30,7 +31,7 @@ function filterPage() {
     sec.innerHTML = bodyFiltered;    
 }
 
-for(let i = 0; i<globalIssues.length; i++) {
+/*for(let i = 0; i<globalIssues.length; i++) {
     console.log('i:' + i + 'object: ' + globalIssues[i]);
     let sec = document.createElement("section");
             sec.classList.add("subcorpo");
@@ -44,4 +45,20 @@ for(let i = 0; i<globalIssues.length; i++) {
             
           document.getElementById("unica")!.appendChild(sec);
           sec.innerHTML = markup;
+}*/
+firebaseApi.acessDatabase().then((results : typeof globalIssues) => results.forEach(globalIssues => {
+    let sec = document.createElement("section");
+            sec.classList.add("subcorpo");
+            const markup : string =`<h3 class="conteudo"> 
+            ${globalIssues.nome} </h3>
+            <h4 class="conteudo">People Afected:</h4>
+            <p class="conteudo">${globalIssues.afetados}</p>
+            <h4 class="conteudo">Rank of Priority:</h4>
+            <p class="conteudo">${globalIssues.rank}</p>
+            <p class="conteudo" onclick="myFunction()">Descrição</p>`;
+            
+          document.getElementById("unica")!.appendChild(sec);
+          sec.innerHTML = markup;
 }
+    
+));

@@ -4,7 +4,7 @@ import {globalIssues} from './globalIssues';
 
 
 class firebaseApi { 
-  database;
+  database : firebase.database.Database;
   firebaseConfig: any;
   
 
@@ -26,11 +26,15 @@ class firebaseApi {
   static async acessDatabase() : Promise<typeof globalIssues> {
       let firebaseObject = new firebaseApi();
       firebaseObject.database.goOnline();
-      let databaseStorage : GlobalIssue[] = new Array(15);
-      return new Promise(function() {firebaseObject.database.ref('/')
-      .once('value');
-  });
+      //let databaseStorage : GlobalIssue[] = new Array(15);
+      return new Promise(function(resolve) {firebaseObject.database.ref('/')
+      .once('value').then((results: firebase.database.DataSnapshot) => {
+        resolve(results.val());
+      });
+    });
+  }
 }
-}
+      
+
 
 export {firebaseApi};
