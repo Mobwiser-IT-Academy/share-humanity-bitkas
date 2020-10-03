@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
 
     entry: './mainScreen/filter.ts',
-    devtool: 'inline-smainScreenource-map',
+    devtool: 'inline-source-map',
     devServer: {
         publicPath : '/dist/',
         contentBase: './mainScreen',

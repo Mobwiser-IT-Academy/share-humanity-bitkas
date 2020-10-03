@@ -31,6 +31,7 @@ function filterPage() {
 }
 
 for(let i = 0; i<globalIssues.length; i++) {
+    console.log('i:' + i + 'object: ' + globalIssues[i]);
     let sec = document.createElement("section");
             sec.classList.add("subcorpo");
             const markup : string =`<h3 class="conteudo"> 

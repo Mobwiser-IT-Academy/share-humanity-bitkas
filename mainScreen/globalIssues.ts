@@ -5,9 +5,17 @@ interface GlobalIssue {
     afetados : string;
     description : string;
     rank : number;
+    globalIssues: Array<GlobalIssue>[];
 
 }
 let globalIssues: Array<GlobalIssue> = new Array(15);
-globalIssues =  firebaseApi.acessDatabase();
+firebaseApi.acessDatabase().then(function(snapshot) {
+    snapshot.forEach(function(child) {
+      globalIssues.push(child);
+      console.log('aqui');
+    })
+    
+
+});
 export {GlobalIssue};
 export {globalIssues};
