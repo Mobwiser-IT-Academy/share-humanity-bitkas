@@ -1,4 +1,3 @@
-
 .head {
   display: flex;
   justify-content: center;
@@ -6,9 +5,8 @@
 body {
   background-color: #ff944d;
   color: rgb(82, 27, 17);
-  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
-
 
 h3 {
   width: 100%;
@@ -37,7 +35,7 @@ h3 {
   /*overflow: auto;*/
   display: flex;
   flex-direction: row;
-  background-image: url(../img/humanitariumImage.jpg);
+  background-image: url(./humanitariumImage.jpg);
   background-size: cover;
   /*height: max-content;*/
   border-style: solid;
