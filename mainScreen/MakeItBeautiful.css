@@ -3,8 +3,8 @@
   justify-content: center;
 }
 body {
-  background-color: #ff944d;
-  color: rgb(82, 27, 17);
+  background-color: #ACE5FF;
+  color: #2E279D;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
@@ -21,8 +21,9 @@ h3 {
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: flex-start;
-  background-color: #e6e6e6;
+  background-color: #2E279D;
   font-size: 22px;
+  color: azure;
 }
 
 .menu p {
@@ -35,8 +36,6 @@ h3 {
   /*overflow: auto;*/
   display: flex;
   flex-direction: row;
-  background-image: url(./humanitariumImage.jpg);
-  background-size: cover;
   /*height: max-content;*/
   border-style: solid;
   border-width: 8px;
