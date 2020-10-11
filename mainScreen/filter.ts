@@ -43,7 +43,7 @@ firebaseApi.acessDatabase().then((results: GlobalIssue[]) => {
             <h4 class="conteudo">Rank of Priority:</h4>
             <p class="conteudo">${results[globalIssue].rank}</p>
             <p class="conteudo" onclick="myFunction()">Descrição</p>`;
-
+    console.log('here');
     document.getElementById("unica")!.appendChild(sec);
     sec.innerHTML = markup;
     globalIssues.push(results[globalIssue]);

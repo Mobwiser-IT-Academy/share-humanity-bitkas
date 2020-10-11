@@ -19,11 +19,20 @@ class firebaseApi {
     };
     firebase.initializeApp(this.firebaseConfig);
     this.database = firebase.database();
+    firebaseApi.acessAccount();
+  }
+
+  
+
+  static acessAccount() {
+    firebase.auth().signInWithEmailAndPassword("bitokeiro@gmail.com", "123456")
+    .catch(error => console.log(error));
   }
 
   static async acessDatabase(): Promise<typeof globalIssues> {
     let firebaseObject = new firebaseApi();
     firebaseObject.database.goOnline();
+
     //let databaseStorage : GlobalIssue[] = new Array(15);
     return new Promise(function (resolve) {
       firebaseObject.database

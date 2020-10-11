@@ -3,7 +3,7 @@
   justify-content: center;
 }
 body {
-  background-color: #ACE5FF;
+  background-color: #ffffff;
   color: #2E279D;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
@@ -31,19 +31,18 @@ h3 {
 }
 
 #unica {
-  width: 80%;
-  margin-right: 10%;
+  width: 95%;
+  margin-right: 5%;
   /*overflow: auto;*/
   display: flex;
   flex-direction: row;
   /*height: max-content;*/
   border-style: solid;
   border-width: 8px;
+  background-color: #2E279D;
 }
 
 .container {
-  width: 80%;
-  margin-right: 10%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -55,12 +54,11 @@ h3 {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-
-  background-color: #ffc299;
   height: 350px;
   width: 25%;
   margin-left: 20px;
   margin-top: 20px;
+  background-color: #ffffff;
 }
 
 /*.corpo div {
