@@ -5,6 +5,7 @@ interface GlobalIssue {
   afetados: string;
   description: string;
   rank: number;
+  imagem: string;
 }
 let globalIssues: Array<GlobalIssue> = new Array(15);
 

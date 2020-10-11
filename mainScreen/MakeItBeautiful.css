@@ -14,6 +14,15 @@ h3 {
   text-shadow: 1px 1px #ff751a;
 }
 
+#descricao {
+  background-image: url(pequena.jpg);
+  color: #ffffff;
+  height: 350px;
+  width: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .menu {
   width: 100%;
   display: inline-flex;
@@ -39,7 +48,8 @@ h3 {
   /*height: max-content;*/
   border-style: solid;
   border-width: 8px;
-  background-color: #2E279D;
+  border-color: #4d80e4;
+  background-color: #46b3e6;
 }
 
 .container {
@@ -59,6 +69,9 @@ h3 {
   margin-left: 20px;
   margin-top: 20px;
   background-color: #ffffff;
+  color: #ffffff;
+  
+ 
 }
 
 /*.corpo div {
@@ -72,6 +85,11 @@ h3 {
   height: 1px;
   width: 100%;
   text-align: center;
+  background-color: rgb(0,0,0,0);
+  background-color: rgba(0,0,0,0,0.4);
+  color: #ffffff;
+  filter: none;
+  -webkit-filter: none;
 }
 
 #foot {
