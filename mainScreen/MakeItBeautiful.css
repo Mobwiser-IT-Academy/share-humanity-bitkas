@@ -15,7 +15,7 @@ h3 {
 }
 
 #descricao {
-  background-image: url(pequena.jpg);
+  background-image: url(Introducao.jpg);
   color: #ffffff;
   height: 350px;
   width: 70%;
@@ -25,6 +25,7 @@ h3 {
 
 .menu {
   width: 100%;
+
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
