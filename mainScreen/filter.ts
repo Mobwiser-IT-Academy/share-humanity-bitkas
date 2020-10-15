@@ -13,22 +13,27 @@ function filterPage() {
   target = input.value;
 
   let filtered: GlobalIssue[];
-  filtered = globalIssues.filter((x) => x.nome.toLocaleLowerCase().trim() === target.toLocaleLowerCase().trim());
+  filtered = globalIssues.filter((x) => x.nome.toLocaleLowerCase().trim() === target.toLocaleLowerCase().trim() || x.nome.trim().toLocaleLowerCase().includes(target.trim().toLocaleLowerCase()));
 
   document.getElementById("unica")!.innerHTML = "";
+  let bodyFiltered : string;
+  for(let i = 0; i<filtered.length; i++) {
+     bodyFiltered = `<div class="card"> 
+                        <img src="${filtered[i].imagem}" alt="IssueImage" style="width:100% height=50%">
+                        <div class="cardcontainer" style="width:100%">
+                          <h3>${filtered[i].nome}</h3>
+                          <h4>People Afected</h4>
+                          <p>${filtered[i].afetados}</p>
+                          <h4>Rank of Priority</h4>
+                          <p>${filtered[i].rank}</p>                            
+                        </div>
+                      </div>`
+ let sec = document.createElement("section");
+ document.getElementById("unica")!.appendChild(sec);
+ sec.innerHTML = bodyFiltered;
 
-  let bodyFiltered: string;
-  bodyFiltered = `<h3 class="conteudo"> 
-        ${filtered[0].nome} </h3>
-        <h4 class="conteudo">People Afected:</h4>
-        <p class="conteudo">${filtered[0].afetados}</p>
-        <h4 class="conteudo">Rank of Priority:</h4>
-        <p class="conteudo">${filtered[0].rank}</p>`;
-
-  let sec = document.createElement("section");
-  sec.classList.add("subcorpo");
-  document.getElementById("unica")!.appendChild(sec);
-  sec.innerHTML = bodyFiltered;
+}
+  
 }
 
 firebaseApi.acessDatabase().then((results: GlobalIssue[]) => { 
@@ -53,7 +58,7 @@ firebaseApi.acessDatabase().then((results: GlobalIssue[]) => {
                                   <p>${results[globalIssue].afetados}</p>
                                   <h4>Rank of Priority</h4>
                                   <p>${results[globalIssue].rank}</p>                            
-                                <div>
+                                </div>
                               </div>`
     document.getElementById("unica")!.appendChild(sec);
     sec.innerHTML = markup;
