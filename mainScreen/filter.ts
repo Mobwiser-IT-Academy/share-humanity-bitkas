@@ -34,20 +34,31 @@ function filterPage() {
 firebaseApi.acessDatabase().then((results: GlobalIssue[]) => { 
     Object.keys(results).forEach((globalIssue : any) => {
     let sec = document.createElement("section");
-    sec.classList.add("subcorpo");
+    //sec.classList.add("subcorpo");
     sec.id= results[globalIssue].nome.trim().toLocaleLowerCase();
-    const markup: string = `<h3 class="conteudo"> 
+    /*const markup: string = `<h3 class="conteudo"> 
             ${results[globalIssue].nome} </h3>
             <h4 class="conteudo">People Afected:</h4>
             <p class="conteudo">${results[globalIssue].afetados}</p>
             <h4 class="conteudo">Rank of Priority:</h4>
             <p class="conteudo">${results[globalIssue].rank}</p>
             <p class="conteudo" onclick="myFunction()">Descrição</p>`;
-    
+    */
+
+    const markup : string = `<div class="card"> 
+                                 <img src="${results[globalIssue].imagem}" alt="IssueImage" style="width:100% height=50%">
+                                <div class="cardcontainer" style="width:100%">
+                                  <h3>${results[globalIssue].nome}</h3>
+                                  <h4>People Afected</h4>
+                                  <p>${results[globalIssue].afetados}</p>
+                                  <h4>Rank of Priority</h4>
+                                  <p>${results[globalIssue].rank}</p>                            
+                                <div>
+                              </div>`
     document.getElementById("unica")!.appendChild(sec);
     sec.innerHTML = markup;
     
-    sec.style.backgroundImage = 'url(' + results[globalIssue].imagem + ')';
+    //sec.style.backgroundImage = 'url(' + results[globalIssue].imagem + ')';
     //sec.style.filter = 'blur(5px)';
     
     globalIssues.push(results[globalIssue]);

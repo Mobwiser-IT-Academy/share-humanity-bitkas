@@ -14,6 +14,25 @@ h3 {
   text-shadow: 1px 1px #ff751a;
 }
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0,2);
+  transition: 0.3s;
+  width: 350px;
+  height: 600px;
+
+}
+
+.card:hover {
+  box-shadow: o 8px 16px 0 rgba(0,0,0,0,0.2);
+}
+
+.cardcontainer {
+  padding: 2px 16px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
 #descricao {
   background-image: url(Introducao.jpg);
   color: #ffffff;
@@ -46,17 +65,9 @@ h3 {
   /*overflow: auto;*/
   display: flex;
   flex-direction: row;
-  /*height: max-content;*/
-  border-style: solid;
-  border-width: 8px;
-  border-color: #4d80e4;
-  background-color: #46b3e6;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
+  /*height: max-content;*/
 }
 
 .subcorpo {
