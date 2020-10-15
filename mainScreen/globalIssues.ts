@@ -1,4 +1,4 @@
-import { firebaseApi } from "./firebase-api";
+
 
 interface GlobalIssue {
   nome: string;
@@ -6,8 +6,12 @@ interface GlobalIssue {
   description: string;
   rank: number;
   imagem: string;
+
+  
 }
 let globalIssues: Array<GlobalIssue> = new Array(15);
+
+
 
 export { GlobalIssue };
 export { globalIssues };
