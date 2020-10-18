@@ -35,12 +35,13 @@ h3 {
 }
 
 #filterDiv input {
-  border-radius: 50%;
+  border-radius: 25px;
 
 }
 
 #filterDiv button {
-  border-radius: 50%;
+  border-radius: 25px;
+  margin: 5px;
   color: #ffffff;
   background-color: black;
 }
@@ -50,6 +51,8 @@ h3 {
   transition: 0.3s;
   width: 350px;
   height: 600px;
+  margin-left: 15px;
+  margin-bottom: 22px;
 
 }
 
