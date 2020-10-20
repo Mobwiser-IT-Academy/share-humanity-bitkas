@@ -160,12 +160,19 @@ h3 {
   }
 }
 
-@media screen and (max-width: 336px) {
+@media screen and (width: 336px) {
   .subcorpo {
-    width: 100%;
+    width: 300px;
   }
 
   .container {
     width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 380) {
+  .card {
+    width: 250px;
   }
 }
