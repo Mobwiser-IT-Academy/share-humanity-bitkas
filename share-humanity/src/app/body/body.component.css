@@ -1,0 +1,7 @@
+#unica {
+   width: inherit;
+   display: flex;
+   justify-content: space-around;
+   border: dashed;
+   padding: dotted;
+  }
