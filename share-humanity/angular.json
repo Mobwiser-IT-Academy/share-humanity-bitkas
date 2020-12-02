@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "share-humanity"
+  "defaultProject": "share-humanity",
+  "cli": {
+    "analytics": "cd3eb6c2-9a7c-440d-a56f-29a1d7a81d05"
+  }
 }
