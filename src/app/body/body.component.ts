@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database'
+import { AngularFireService } from '../angular-fire.service';
 import { Observable } from 'rxjs';
 import { MatCardModule } from '@angular/material/card';
 import {
@@ -30,8 +30,8 @@ import {
 export class BodyComponent implements OnInit {
 
   items : Observable<any[]>;
-  constructor(db : AngularFireDatabase) { 
-    this.items = db.list('issues').valueChanges();
+  constructor(private fireService : AngularFireService) { 
+    this.items = fireService.items;
   }
   
   ngOnInit(): void {
