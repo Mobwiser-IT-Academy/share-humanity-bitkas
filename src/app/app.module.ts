@@ -9,12 +9,14 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
+import { DescriptionComponent } from './description/description.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    BodyComponent
+    BodyComponent,
+    DescriptionComponent
   ],
   imports: [
     BrowserModule,
