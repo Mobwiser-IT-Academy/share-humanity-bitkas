@@ -7,7 +7,8 @@
            <h4>People Afected</h4>
            <p>{{ issue.afetados }}</p>
            <h4>Rank of Priority</h4>
-           <p>{{ issue.rank }}</p>                            
+           <p>{{ issue.rank }}</p>   
+           <a [routerLink]="['/description',  issue.name]">Description</a>                         
          </mat-card-content>
     </mat-card> 
 </div>

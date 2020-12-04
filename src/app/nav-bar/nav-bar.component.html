@@ -2,7 +2,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <nav class="topnav" id="topnav">
-    <a href="" class="active">Home</a>
-    <a href="">Descrição</a>
+    <a routerLink="/homepage" routerLinkActive="active" class="active">Home</a>
+    <a routerLink="/description" routerLinkActive="active">Descrição</a>
     <a href="javascript:void(0);" class="icon" (click)=changeNavBar()><i class="fa fa-bars"></i></a>
 </nav>
+
+<router-outlet></router-outlet>
