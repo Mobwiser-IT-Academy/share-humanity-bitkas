@@ -1,2 +1,5 @@
-<p>{{ name }}</p>
-<p> Hello from the descritpion component</p>
+<div class="center" *ngFor="let item of items | async">
+    <div class="description" *ngIf="item.name == issueName">
+        <p>{{item.description}}</p>
+    </div>
+</div>

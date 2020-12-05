@@ -10,18 +10,20 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class DescriptionComponent implements OnInit {
   route: any;
-  name : any;
-  item : Observable<any[]>;
+  issueName : string;
+  items : Observable<any[]>;
   constructor(item : AngularFireService, routes: ActivatedRoute) {
-    this.item = item.items;
+    this.items = item.items;
     this.route = routes;
+    this.issueName="";
    }
   
   ngOnInit(): void {
-    this.route.queryParams.subscribe((params: any) => {
-      this.name = params['name'];
-      console.log(name);
+    this.route.params.subscribe((params: any) => {
+      this.issueName = params['name'];
     });
+
+
   }
 
 }
