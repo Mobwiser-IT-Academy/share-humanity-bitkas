@@ -10,13 +10,15 @@ import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { DescriptionComponent } from './description/description.component';
+import { IssuesFilterComponent } from './issues-filter/issues-filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     BodyComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    IssuesFilterComponent
   ],
   imports: [
     BrowserModule,

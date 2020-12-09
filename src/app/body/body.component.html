@@ -1,3 +1,4 @@
+<app-issues-filter (pedido)='filter($event)'></app-issues-filter>
 <div id="unica">
 <div [@flyInOut]="'in'" *ngFor="let issue of items | async">
     <mat-card class="card" >
@@ -11,7 +12,9 @@
            <a [routerLink]="['/description',  issue.name]">Description</a>                         
          </mat-card-content>
     </mat-card> 
+    
 </div>
 </div>
+
 
 

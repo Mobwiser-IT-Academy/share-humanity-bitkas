@@ -9,6 +9,7 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import { Issue } from './Issues';
 
 @Component({
   selector: 'app-body',
@@ -36,5 +37,26 @@ export class BodyComponent implements OnInit {
   
   ngOnInit(): void {
   }
+
+  filter(value:any) {
+    document.getElementById('unica')!.innerHTML = "";
+    this.items.subscribe((data) => {
+      let filtered = data.filter((x) => x.name.toLocaleLowerCase().trim() === value.toLocaleLowerCase().trim() || x.name.trim().toLocaleLowerCase().includes(value.trim().toLocaleLowerCase()));
+      
+      let markup = `<mat-card class="card" >
+      <img mat-card-image src="../../assets/${filtered[0].imagem}" alt="IssueImage" style="width:100% height=50%">
+      <mat-card-content style="width:100%">
+        <h3>${ filtered[0].name }</h3>
+        <h4>People Afected</h4>
+        <p>${ filtered[0].afetados }</p>
+        <h4>Rank of Priority</h4>
+        <p>${ filtered[0].rank }</p>   
+        <a [routerLink]="['/description',  issue.name]">Description</a>                         
+      </mat-card-content>
+ </mat-card> `
+      let node = document.getElementById('unica')!;
+      node.innerHTML = markup;
+  });
+}
 
 }
