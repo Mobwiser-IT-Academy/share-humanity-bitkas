@@ -1,4 +1,18 @@
-<app-issues-filter (pedido)='filter($event)'></app-issues-filter>
+<app-issues-filter (issuesFilter)="pedido = $event" *ngFor="let issue of items | async">
+  <div *ngIf="issue.name == pedido"><mat-card class="card" >
+    <img mat-card-image src="../../assets/{{issue.imagem}}" alt="IssueImage" style="width:100% height=50%">
+    <mat-card-content style="width:100%">
+      <h3>{{ issue.name }}</h3>
+      <h4>People Afected</h4>
+      <p>{{ issue.afetados }}</p>
+      <h4>Rank of Priority</h4>
+      <p>{{ issue.rank }}</p>   
+      <a [routerLink]="['/description',  issue.name]">Description</a>                         
+    </mat-card-content>
+</mat-card></div>
+</app-issues-filter>
+
+
 <div id="unica">
 <div [@flyInOut]="'in'" *ngFor="let issue of items | async">
     <mat-card class="card" >

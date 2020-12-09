@@ -1,7 +1,7 @@
 <div id="outerDiv">
     <div id="filterDiv">
     <label for="filter" id="labelFilter">insert issue to filter:</label>
-    <input type="text" id="filter" name="filter" placeholder="climate change" />
-    <button type="button" id="submitFilter">click</button>
+    <input type="text" #output name="filter" placeholder="climate change" />
+    <button type="button"(click)="issuesFilter(output.value)">click</button>
     </div>
     </div>

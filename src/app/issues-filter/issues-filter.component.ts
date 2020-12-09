@@ -7,17 +7,16 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class IssuesFilterComponent implements OnInit {
 
-  @Output() pedido = new EventEmitter();
-  constructor() { }
+  @Output() pedido = new EventEmitter<string>();
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
-    let node = document.getElementById('submitFilter')!;
-    node.addEventListener('click', this.issuesFilter);
+  
   }
 
-  issuesFilter() {
-    let input = document.getElementById("filter")! as HTMLInputElement;
-    this.pedido.emit(input.value);
+  issuesFilter(value : string) {
+    this.pedido.emit(value);
   }
-
 }
