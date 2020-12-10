@@ -33,9 +33,7 @@ export class BodyComponent implements OnInit {
   items : Observable<any[]>;
   pedido : any;
   constructor(private fireService : AngularFireService) { 
-    this.items = fireService.items;
-    //this.pedido = "";
-    
+    this.items = fireService.items;    
   }
   
   ngOnInit(): void {
@@ -43,9 +41,16 @@ export class BodyComponent implements OnInit {
 
   getIssue(value : any) {
     this.pedido = value;
-    alert('recebido: ' + value);
-    alert(this.pedido);
-    //document.getElementById('unica')!.innerHTML ="";
-  } 
+  }
+  
+  resolveIssues(value: any, issue: any) : boolean {
+    if(value == undefined) {
+      return true;
+    } else if(issue.name.toLocaleLowerCase().trim() === value.toLocaleLowerCase().trim() || issue.name.trim().toLocaleLowerCase().includes(value.trim().toLocaleLowerCase())) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
 }
