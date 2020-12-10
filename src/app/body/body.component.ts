@@ -45,7 +45,7 @@ export class BodyComponent implements OnInit {
     this.pedido = value;
     alert('recebido: ' + value);
     alert(this.pedido);
-    document.getElementById('unica')!.innerHTML ="";
+    //document.getElementById('unica')!.innerHTML ="";
   } 
 
 }
