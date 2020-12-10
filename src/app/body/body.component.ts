@@ -32,17 +32,20 @@ import { IssuesFilterComponent } from '../issues-filter/issues-filter.component'
 export class BodyComponent implements OnInit {
   items : Observable<any[]>;
   pedido : any;
-  constructor(private fireService : AngularFireService, pedido : IssuesFilterComponent) { 
+  constructor(private fireService : AngularFireService) { 
     this.items = fireService.items;
-    this.pedido = "";
+    //this.pedido = "";
     
   }
   
   ngOnInit(): void {
   }
 
-  getIssue(value : string) {
+  getIssue(value : any) {
     this.pedido = value;
-  }  
+    alert('recebido: ' + value);
+    alert(this.pedido);
+    document.getElementById('unica')!.innerHTML ="";
+  } 
 
 }

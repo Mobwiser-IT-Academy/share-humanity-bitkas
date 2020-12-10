@@ -18,5 +18,6 @@ export class IssuesFilterComponent implements OnInit {
 
   issuesFilter(value : string) {
     this.pedido.emit(value);
+    alert('enviado: '+value);
   }
 }
