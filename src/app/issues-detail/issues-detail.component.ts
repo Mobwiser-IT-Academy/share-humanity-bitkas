@@ -5,10 +5,10 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-description',
-  templateUrl: './description.component.html',
-  styleUrls: ['./description.component.css']
+  templateUrl: './issues-detail.component.html',
+  styleUrls: ['./issues-detail.component.css']
 })
-export class DescriptionComponent implements OnInit {
+export class IssuesDetailComponent implements OnInit {
   route: any;
   issueName : string;
   items : Observable<any[]>;
@@ -24,6 +24,10 @@ export class DescriptionComponent implements OnInit {
     });
 
 
+  }
+
+  issue() : string {
+    return this.issueName;
   }
 
 }

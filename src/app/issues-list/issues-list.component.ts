@@ -14,8 +14,8 @@ import { IssuesFilterComponent } from '../issues-filter/issues-filter.component'
 
 @Component({
   selector: 'app-body',
-  templateUrl: './body.component.html',
-  styleUrls: ['./body.component.css'],
+  templateUrl: './issues-list.component.html',
+  styleUrls: ['./issues-list.component.css'],
   animations: [
     trigger('flyInOut', [
       state('in', style({ transform: 'translateX(0)' })),
@@ -29,7 +29,7 @@ import { IssuesFilterComponent } from '../issues-filter/issues-filter.component'
     ])
   ]
 })
-export class BodyComponent implements OnInit {
+export class IssuesListComponent implements OnInit {
   items : Observable<any[]>;
   pedido : any;
   constructor(private fireService : AngularFireService) { 

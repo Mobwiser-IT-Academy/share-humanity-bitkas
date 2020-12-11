@@ -13,11 +13,12 @@ export class IssuesFilterComponent implements OnInit {
    }
 
   ngOnInit(): void {
-  
+  let node = document.getElementById('output')!;
+  node.addEventListener('input', this.issuesFilter());
   }
+
 
   issuesFilter(value : string) {
     this.pedido.emit(value);
-    alert('enviado: '+value);
   }
 }
