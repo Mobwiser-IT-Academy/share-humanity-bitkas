@@ -31,16 +31,18 @@ import { IssuesFilterComponent } from '../issues-filter/issues-filter.component'
 })
 export class IssuesListComponent implements OnInit {
   items : Observable<any[]>;
-  pedido : any;
+  pedido : string;
   constructor(private fireService : AngularFireService) { 
-    this.items = fireService.items;    
+    this.items = fireService.items;
+    this.pedido="";    
   }
   
   ngOnInit(): void {
   }
 
   getIssue(value : any) {
-    this.pedido = value;
+    this.pedido += value;
+    console.log(this.pedido);
   }
   
   resolveIssues(value: any, issue: any) : boolean {
