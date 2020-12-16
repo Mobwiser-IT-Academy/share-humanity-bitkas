@@ -41,7 +41,7 @@ export class IssuesListComponent implements OnInit {
   }
 
   getIssue(value : any) {
-    this.pedido += value;
+    this.pedido = value;
     console.log(this.pedido);
   }
   

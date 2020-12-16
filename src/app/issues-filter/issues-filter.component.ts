@@ -7,6 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class IssuesFilterComponent implements OnInit {
 
+  keyPressed : any;
   valueInput: any;
   @Output() pedido = new EventEmitter<string>();
   constructor() {
@@ -17,7 +18,10 @@ export class IssuesFilterComponent implements OnInit {
   }
 
 
+
   issuesFilter(value : any) {
-    this.pedido.emit(value.data);
+   
+      this.pedido.emit(value.target.value);
+    
   }
 }
