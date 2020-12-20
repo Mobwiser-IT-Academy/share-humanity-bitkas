@@ -1,0 +1,19 @@
+<form [formGroup]='issuesForm' #issuesForm id="issuesForm">
+    <label>
+        <input type="text" formControlName='issueName'>
+    </label>
+
+    <label>
+        <input type="text" formControlName='issueAfected'>
+    </label>
+
+    <label>
+        <input type="text" formControlName='issueRankofPriority'>
+    </label>
+
+    <label>
+        <input type="file" formControlName='issueImage'>
+    </label>
+
+    <button type="submit">Submit Issue</button>
+</form>

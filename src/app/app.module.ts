@@ -11,6 +11,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { IssuesDetailComponent } from './issues-detail/issues-detail.component';
 import { IssuesFilterComponent } from './issues-filter/issues-filter.component';
+import { SubmitIssuesFormComponent } from './submit-issues-form/submit-issues-form.component';
+import { ReactiveFormsModule } from '@angular/forms'
+
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { IssuesFilterComponent } from './issues-filter/issues-filter.component';
     NavBarComponent,
     IssuesListComponent,
     IssuesDetailComponent,
-    IssuesFilterComponent
+    IssuesFilterComponent,
+    SubmitIssuesFormComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,7 @@ import { IssuesFilterComponent } from './issues-filter/issues-filter.component';
     AngularFireDatabaseModule,
     BrowserAnimationsModule,
     MatCardModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
