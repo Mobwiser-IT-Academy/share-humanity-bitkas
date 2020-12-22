@@ -8,16 +8,17 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 })
 export class SubmitIssuesFormComponent implements OnInit {
 
-  issuesForm : FormGroup = this.fb.group({
-    issueName: [''],
-    issueAfected : [''],
-    issueRankofPriority: [''],
-    issueImage: [''],
-  });
+  issuesForm : any;
 
   constructor(private fb : FormBuilder) { }
 
   ngOnInit(): void {
+    this.issuesForm  = this.fb.group({
+      issueName : [''],
+      issueAfected : [''],
+      issueRankofPriority : [''],
+      issueImage : [''],
+    });
   }
 
 }
