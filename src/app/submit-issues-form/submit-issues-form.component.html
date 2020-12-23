@@ -1,4 +1,4 @@
-<form [formGroup]="issuesForm" #issuesForm id="issuesForm">
+<form [formGroup]="issuesForm" id="issuesForm" (ngSubmit)="issueOnSubmit()">
     <label>
         <input type="text" formControlName='issueName'>
     </label>
