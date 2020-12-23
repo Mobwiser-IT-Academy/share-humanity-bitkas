@@ -12,8 +12,9 @@ import { MatCardModule } from '@angular/material/card';
 import { IssuesDetailComponent } from './issues-detail/issues-detail.component';
 import { IssuesFilterComponent } from './issues-filter/issues-filter.component';
 import { SubmitIssuesFormComponent } from './submit-issues-form/submit-issues-form.component';
-import { ReactiveFormsModule } from '@angular/forms'
-
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms'
     BrowserAnimationsModule,
     MatCardModule,
     ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],

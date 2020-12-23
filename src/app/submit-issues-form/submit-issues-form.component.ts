@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
-import { SaveIssueFirebaseService } from '../save-issue-firebase.service';
+import { AngularFireService } from '../angular-fire.service';
 
 @Component({
   selector: 'app-submit-issues-form',
@@ -12,7 +12,7 @@ export class SubmitIssuesFormComponent implements OnInit {
   issuesForm : FormGroup;
 
 
-  constructor(private fb : FormBuilder, private saveIssueFirebase: SaveIssueFirebaseService) {
+  constructor(private fb : FormBuilder, private firebaseAPI: AngularFireService) {
     this.issuesForm  = this.fb.group({
       issueName : [''],
       issueAfected : [''],
@@ -27,7 +27,7 @@ export class SubmitIssuesFormComponent implements OnInit {
   }
 
   issueOnSubmit() : void{
-    this.saveIssueFirebase.saveIssueFirebase(this.issuesForm.value);
+    this.firebaseAPI.saveIssueFirebase(this.issuesForm.value);
   }
 
 }
