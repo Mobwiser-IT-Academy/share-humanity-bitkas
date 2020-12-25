@@ -26,8 +26,13 @@ export class SubmitIssuesFormComponent implements OnInit {
     
   }
 
-  issueOnSubmit() : void{
+  issueOnSubmit(event: any) : void{
+    //console.log(event.target.files[0]);
     this.firebaseAPI.saveIssueFirebase(this.issuesForm.value);
+  }
+
+  submitFile(event : any) : void{
+    console.log(event.target.files[0]);
   }
 
 }

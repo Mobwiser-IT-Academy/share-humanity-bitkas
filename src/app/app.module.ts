@@ -15,6 +15,7 @@ import { SubmitIssuesFormComponent } from './submit-issues-form/submit-issues-fo
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {MatInputModule} from '@angular/material/input';
     MatCardModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent],
