@@ -23,7 +23,13 @@ export class SubmitIssuesFormComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    
+    this.issuesForm
+      .get('issueImage')!
+      .valueChanges
+      .subscribe((newValue : File) => {
+        //this.submitFile(newValue);
+        console.log(typeof newValue);
+      });
   }
 
   issueOnSubmit(event: any) : void{
@@ -31,8 +37,10 @@ export class SubmitIssuesFormComponent implements OnInit {
     this.firebaseAPI.saveIssueFirebase(this.issuesForm.value);
   }
 
-  submitFile(event : any) : void{
-    console.log(event.target.files[0]);
+  submitFile( event : any) : void{
+    let file : File = event.target.files[0]
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
   }
 
 }
