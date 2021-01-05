@@ -1,5 +1,5 @@
 <div id="issueFormDiv">
-<form [formGroup]="issuesForm" id="issuesForm" (ngSubmit)="issueOnSubmit($event)">
+<form [formGroup]="issuesForm" id="issuesForm" (ngSubmit)="issueOnSubmit()">
     
     <mat-form-field appearance='fill'>
         <mat-label>Enter the Name of an Issue</mat-label>
@@ -18,13 +18,18 @@
         <input matInput type="text" formControlName='issueRankofPriority'>
         <mat-icon matSuffix>😁</mat-icon>
     </mat-form-field>
-    
-    
-        <label>Enter an Image of an Issue</label>
+
+    <mat-form-field>
+        <mat-label>Post your Issue image</mat-label>
+        <ngx-mat-file-input (change)="submitFile($event)" formControlName='issueImage'></ngx-mat-file-input>
+        <!--<label>Enter an Image of an Issue</label>
         <input type="file" (change)="submitFile($event)" formControlName='issueImage'>
         <!--(change)="submitFile($event.target.files)"-->
+    </mat-form-field>
     
+        
     
+
     <mat-form-field appearance="fill">
         <mat-label>Enter the Description of an Issue</mat-label>
         <input matInput type="text" formControlName='issueDescription'>
@@ -33,6 +38,9 @@
     
     <button type="submit">Submit Issue</button>
 </form>
+
+<mat-progress-bar [value]="uploadProgress | async" mode="determinate">
+</mat-progress-bar>
 </div>
 <!--<mat-form-field appearance="fill">
     <mat-label>Fill form field</mat-label>

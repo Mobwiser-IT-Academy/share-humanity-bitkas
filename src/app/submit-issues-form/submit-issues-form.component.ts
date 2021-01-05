@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { Observable } from 'rxjs';
 import { AngularFireService } from '../angular-fire.service';
 
 @Component({
@@ -10,7 +11,9 @@ import { AngularFireService } from '../angular-fire.service';
 export class SubmitIssuesFormComponent implements OnInit {
 
   issuesForm : FormGroup;
-
+  uploadProgress : any;
+  submitted : boolean;
+  preview : string | ArrayBuffer |null;
 
   constructor(private fb : FormBuilder, private firebaseAPI: AngularFireService) {
     this.issuesForm  = this.fb.group({
@@ -20,26 +23,33 @@ export class SubmitIssuesFormComponent implements OnInit {
       issueImage : [''],
       issueDescription: [''],
     });
-   }
+    this.submitted = false;
+    this.preview = "";
+  }
 
   ngOnInit(): void {
     this.issuesForm
       .get('issueImage')!
       .valueChanges
       .subscribe((newValue : File) => {
-        //this.submitFile(newValue);
+        
         console.log(typeof newValue);
       });
   }
 
-  issueOnSubmit(event: any) : void{
-    //console.log(event.target.files[0]);
-    this.firebaseAPI.saveIssueFirebase(this.issuesForm.value);
+  issueOnSubmit() : Observable<number | undefined> {
+    this.submitted = true;
+    
+    const { uploadProgress } = this.firebaseAPI.saveIssueFirebase(this.issuesForm.value);
+    this.uploadProgress = uploadProgress;
+    
+    return uploadProgress;
   }
 
   submitFile( event : any) : void{
     let file : File = event.target.files[0]
     const reader = new FileReader();
+    reader.onload = (loadEvent) => (this.preview = loadEvent.target!.result);
     reader.readAsDataURL(file);
   }
 

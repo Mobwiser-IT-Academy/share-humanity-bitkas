@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database'
 import { Observable } from 'rxjs';
-import { AngularFireStorage } from '@angular/fire/storage';
+import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +19,8 @@ export class AngularFireService {
 
    saveIssueFirebase(formValue: any) {
     let file = formValue.issueImage;
-    let path = file.split("\\")[2];
-    this.storage.upload('issues/' + path, file);
+    let path = 'teste';
+    const uploadTask : AngularFireUploadTask = this.storage.upload('issues/' + path, file);
     this.db.list('issues').push({
       afetados: formValue.issueAfected,
       description: formValue.issueDescription,
@@ -28,5 +28,8 @@ export class AngularFireService {
       name: formValue.issueName,
       rank: formValue.issueRankofPriority
     });
+    return {
+      uploadProgress: uploadTask.percentageChanges()
+    };
   }
 }

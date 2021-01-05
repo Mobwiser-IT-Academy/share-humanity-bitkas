@@ -16,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { AngularFireStorageModule } from '@angular/fire/storage';
-
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,9 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    MatProgressBarModule,
+    MaterialFileInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
