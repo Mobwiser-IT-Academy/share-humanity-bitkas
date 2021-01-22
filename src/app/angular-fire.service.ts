@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database'
-import { Observable } from 'rxjs';
+import { from, Observable } from 'rxjs';
 import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
+import { switchMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -11,25 +12,36 @@ export class AngularFireService {
   issueImagePath: string;
   db: AngularFireDatabase;
   items : Observable<any[]>
+  downloadURL : Observable<string>;
+  imageURL: string;
+
   constructor(db : AngularFireDatabase, private storage: AngularFireStorage) {
     this.items = db.list('issues').valueChanges();
     this.db = db;
-    this.issueImagePath="";
+   }
+
+   saveImageStorage(issueImage : File) : AngularFireUploadTask {
+    const uploadTask : AngularFireUploadTask = this.storage.upload('issues/' + issueImage.name, issueImage);
+    this.issueImagePath = 'issues/' + issueImage.name;
+    this.downloadURL = this.getDownloadURL(uploadTask, this.issueImagePath);
+    return uploadTask;
    }
 
    saveIssueFirebase(formValue: any) {
-    let file = formValue.issueImage;
-    let path = 'teste';
-    const uploadTask : AngularFireUploadTask = this.storage.upload('issues/' + path, file);
+    this.downloadURL.subscribe(x => this.imageURL = x);
     this.db.list('issues').push({
       afetados: formValue.issueAfected,
       description: formValue.issueDescription,
-      imagem: 'issues/' + path,
+      imagem: this.imageURL,
       name: formValue.issueName,
       rank: formValue.issueRankofPriority
     });
-    return {
+    /*return {
       uploadProgress: uploadTask.percentageChanges()
-    };
+    };*/
+  }
+
+  private getDownloadURL(uploadTask : AngularFireUploadTask, path : string) : Observable<string> {
+    return from(uploadTask).pipe(switchMap((_) => this.storage.ref(path).getDownloadURL())); 
   }
 }

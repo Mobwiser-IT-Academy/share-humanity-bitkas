@@ -10,10 +10,11 @@ import { AngularFireService } from '../angular-fire.service';
 })
 export class SubmitIssuesFormComponent implements OnInit {
 
+  imageToUpload : File;
   issuesForm : FormGroup;
   uploadProgress : any;
   submitted : boolean;
-  preview : string | ArrayBuffer |null;
+  //preview : string | ArrayBuffer |null;
 
   constructor(private fb : FormBuilder, private firebaseAPI: AngularFireService) {
     this.issuesForm  = this.fb.group({
@@ -24,7 +25,7 @@ export class SubmitIssuesFormComponent implements OnInit {
       issueDescription: [''],
     });
     this.submitted = false;
-    this.preview = "";
+    //this.preview = "";
   }
 
   ngOnInit(): void {
@@ -37,20 +38,21 @@ export class SubmitIssuesFormComponent implements OnInit {
       });
   }
 
-  issueOnSubmit() : Observable<number | undefined> {
+  issueOnSubmit() : void {
     this.submitted = true;
+    const uploadProgress = this.firebaseAPI.saveImageStorage(this.imageToUpload);
+    this.firebaseAPI.saveIssueFirebase(this.issuesForm.value);
+    //this.uploadProgress = uploadProgress;
     
-    const { uploadProgress } = this.firebaseAPI.saveIssueFirebase(this.issuesForm.value);
-    this.uploadProgress = uploadProgress;
-    
-    return uploadProgress;
+    //return uploadProgress;
   }
 
   submitFile( event : any) : void{
     let file : File = event.target.files[0]
     const reader = new FileReader();
-    reader.onload = (loadEvent) => (this.preview = loadEvent.target!.result);
+    //reader.onload = (loadEvent) => (this.preview = loadEvent.target!.result);
     reader.readAsDataURL(file);
+    this.imageToUpload = file;
   }
 
 }
