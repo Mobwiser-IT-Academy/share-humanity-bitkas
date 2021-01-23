@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { AngularFireService } from '../angular-fire.service';
 
@@ -18,11 +18,16 @@ export class SubmitIssuesFormComponent implements OnInit {
 
   constructor(private fb : FormBuilder, private firebaseAPI: AngularFireService) {
     this.issuesForm  = this.fb.group({
-      issueName : [''],
-      issueAfected : [''],
-      issueRankofPriority : [''],
-      issueImage : [''],
-      issueDescription: [''],
+      issueName : ['',
+    Validators.required],
+      issueAfected : ['',
+    Validators.required],
+      issueRankofPriority : ['',
+    Validators.required],
+      issueImage : ['',
+    Validators.required],
+      issueDescription: ['',
+    Validators.required],
     });
     this.submitted = false;
     //this.preview = "";
