@@ -28,14 +28,16 @@ export class AngularFireService {
    }
 
    saveIssueFirebase(formValue: any) {
-    this.downloadURL.subscribe(x => this.imageURL = x);
-    this.db.list('issues').push({
-      afetados: formValue.issueAfected,
-      description: formValue.issueDescription,
-      imagem: this.imageURL,
-      name: formValue.issueName,
-      rank: formValue.issueRankofPriority
+    this.downloadURL.subscribe(x => {
+      this.db.list('issues').push({
+        afetados: formValue.issueAfected,
+        description: formValue.issueDescription,
+        imagem: x,
+        name: formValue.issueName,
+        rank: formValue.issueRankofPriority
+      });
     });
+    
     /*return {
       uploadProgress: uploadTask.percentageChanges()
     };*/
