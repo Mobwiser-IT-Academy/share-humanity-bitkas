@@ -27,7 +27,7 @@ export class AngularFireService {
     return uploadTask;
    }
 
-   saveIssueFirebase(formValue: any) {
+   saveIssueFirebase(formValue: any) : string {
     this.downloadURL.subscribe(x => {
       this.db.list('issues').push({
         afetados: formValue.issueAfected,
@@ -35,9 +35,11 @@ export class AngularFireService {
         imagem: x,
         name: formValue.issueName,
         rank: formValue.issueRankofPriority
+        
       });
+      
     });
-    
+    return "Upload Feito"
     /*return {
       uploadProgress: uploadTask.percentageChanges()
     };*/

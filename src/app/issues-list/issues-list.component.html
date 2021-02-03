@@ -3,7 +3,7 @@
 <div id="unica">
 <div [@flyInOut]="'in'" *ngFor="let issue of items | async">
     <mat-card class="card" *ngIf="resolveIssues(pedido, issue)">
-         <img mat-card-image src="{{issue.imagem}}" alt="IssueImage" style="width:100% height=50%">
+         <img mat-card-image src="{{issue.imagem}}" ng-style="{ width : 350, height : 235 }" alt="IssueImage" style="width:100% height=50%">
          <mat-card-content style="width:100%">
            <h3>{{ issue.name }}</h3>
            <h4>People Afected</h4>

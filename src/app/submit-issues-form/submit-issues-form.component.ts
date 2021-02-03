@@ -14,6 +14,7 @@ export class SubmitIssuesFormComponent implements OnInit {
   issuesForm : FormGroup;
   uploadProgress : any;
   submitted : boolean;
+  done: string;
   //preview : string | ArrayBuffer |null;
 
   constructor(private fb : FormBuilder, private firebaseAPI: AngularFireService) {
@@ -30,6 +31,7 @@ export class SubmitIssuesFormComponent implements OnInit {
     Validators.required],
     });
     this.submitted = false;
+
     //this.preview = "";
   }
 
@@ -43,12 +45,16 @@ export class SubmitIssuesFormComponent implements OnInit {
       });
   }
 
+  openDialog() : void {
+
+  }
+
   issueOnSubmit() : void {
     this.submitted = true;
     const uploadProgress = this.firebaseAPI.saveImageStorage(this.imageToUpload);
-    this.firebaseAPI.saveIssueFirebase(this.issuesForm.value);
+    this.done = this.firebaseAPI.saveIssueFirebase(this.issuesForm.value);
     //this.uploadProgress = uploadProgress;
-    
+    alert(this.done);
     //return uploadProgress;
   }
 
