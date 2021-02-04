@@ -18,6 +18,7 @@ import {MatInputModule} from '@angular/material/input';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
+import { MatSnackBarModule } from '@angular/material/snack-bar'
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { MaterialFileInputModule } from 'ngx-material-file-input';
     MatInputModule,
     AngularFireStorageModule,
     MatProgressBarModule,
-    MaterialFileInputModule
+    MaterialFileInputModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

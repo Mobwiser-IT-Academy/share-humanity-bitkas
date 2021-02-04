@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { AngularFireService } from '../angular-fire.service';
 
@@ -17,7 +18,7 @@ export class SubmitIssuesFormComponent implements OnInit {
   done: string;
   //preview : string | ArrayBuffer |null;
 
-  constructor(private fb : FormBuilder, private firebaseAPI: AngularFireService) {
+  constructor(private fb : FormBuilder, private firebaseAPI: AngularFireService, private matSnackBar : MatSnackBar) {
     this.issuesForm  = this.fb.group({
       issueName : ['',
     Validators.required],
@@ -52,9 +53,11 @@ export class SubmitIssuesFormComponent implements OnInit {
   issueOnSubmit() : void {
     this.submitted = true;
     const uploadProgress = this.firebaseAPI.saveImageStorage(this.imageToUpload);
-    this.done = this.firebaseAPI.saveIssueFirebase(this.issuesForm.value);
+    this.firebaseAPI.saveIssueFirebase(this.issuesForm.value);
     //this.uploadProgress = uploadProgress;
-    alert(this.done);
+    this.matSnackBar.open('Upload com Sucesso!',"" , {
+      duration: 5000,
+    });
     //return uploadProgress;
   }
 
