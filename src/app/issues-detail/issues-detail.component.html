@@ -1,0 +1,5 @@
+<div class="center" *ngFor="let item of items | async">
+    <div class="description" *ngIf="item.name == issue()">
+        <p>{{item.description}}</p>
+    </div>
+</div>
