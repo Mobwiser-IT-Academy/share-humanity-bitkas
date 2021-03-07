@@ -9,7 +9,8 @@
     "eslint": "npx eslint .",
     "build": "webpack",
     "program": "start humanitariumIssues.html",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "deploy": "ng deploy --base-href=/Mobwiser-IT-Academy/share-humanity-bitkas/"
   },
   "repository": {
     "type": "git",
