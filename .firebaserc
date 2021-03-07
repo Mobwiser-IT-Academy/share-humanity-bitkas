@@ -1,5 +1,11 @@
 {
-  "projects": {
-    "default": "global-issues-8284f"
+  "targets": {
+    "angular-3bb22": {
+      "hosting": {
+        "share-humanity": [
+          "angular-3bb22"
+        ]
+      }
+    }
   }
 }

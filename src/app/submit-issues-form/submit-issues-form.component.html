@@ -1,0 +1,48 @@
+<div id="issueFormDiv">
+<form [formGroup]="issuesForm" id="issuesForm" (ngSubmit)="issueOnSubmit()">
+    
+    <mat-form-field appearance='fill'>
+        <mat-label>Enter the Name of an Issue</mat-label>
+            <input matInput type="text" formControlName='issueName'>
+            <mat-icon matSuffix>😁</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Enter the Number of Afected People</mat-label>
+        <input matInput type="text" formControlName='issueAfected'>
+        <mat-icon matSuffix>😁</mat-icon>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>Enter the Rank of Priority of an Issue</mat-label>
+        <input matInput type="text" formControlName='issueRankofPriority'>
+        <mat-icon matSuffix>😁</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Post your Issue image</mat-label>
+        <ngx-mat-file-input (change)="submitFile($event)" formControlName='issueImage'></ngx-mat-file-input>
+        <!--<label>Enter an Image of an Issue</label>
+        <input type="file" (change)="submitFile($event)" formControlName='issueImage'>
+        <!--(change)="submitFile($event.target.files)"-->
+    </mat-form-field>
+    
+        
+    
+
+    <mat-form-field appearance="fill">
+        <mat-label>Enter the Description of an Issue</mat-label>
+        <input matInput type="text" formControlName='issueDescription'>
+        <mat-icon matSuffix>😁</mat-icon>
+    </mat-form-field>
+    
+    <button type="submit">Submit Issue</button>
+</form>
+
+
+<!--<mat-form-field appearance="fill">
+    <mat-label>Fill form field</mat-label>
+    <input matInput placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>-->
