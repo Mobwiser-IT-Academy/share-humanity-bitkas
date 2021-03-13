@@ -1,0 +1,91 @@
+{
+  "configVersion": 1,
+  "timestamp": 1615666575674,
+  "index": "/share-humanity-bitkas/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/share-humanity-bitkas/4.c42d0790d8d6c1ae55e2.js",
+        "/share-humanity-bitkas/favicon.ico",
+        "/share-humanity-bitkas/index.html",
+        "/share-humanity-bitkas/main.669aa382a3f0f63017c4.js",
+        "/share-humanity-bitkas/manifest.webmanifest",
+        "/share-humanity-bitkas/polyfills.bf99d438b005d57b2b31.js",
+        "/share-humanity-bitkas/runtime.ed9d973e507d2f11f57e.js",
+        "/share-humanity-bitkas/styles.4f7f096766fa7827ec3e.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/share-humanity-bitkas/assets/AIDS.jpg",
+        "/share-humanity-bitkas/assets/Ageing.jpg",
+        "/share-humanity-bitkas/assets/Hunger.jpg",
+        "/share-humanity-bitkas/assets/climate_change2.jpg",
+        "/share-humanity-bitkas/assets/icons/icon-128x128.png",
+        "/share-humanity-bitkas/assets/icons/icon-144x144.png",
+        "/share-humanity-bitkas/assets/icons/icon-152x152.png",
+        "/share-humanity-bitkas/assets/icons/icon-192x192.png",
+        "/share-humanity-bitkas/assets/icons/icon-384x384.png",
+        "/share-humanity-bitkas/assets/icons/icon-512x512.png",
+        "/share-humanity-bitkas/assets/icons/icon-72x72.png",
+        "/share-humanity-bitkas/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/share-humanity-bitkas/4.c42d0790d8d6c1ae55e2.js": "b4655f61bdda367d592d3ec30cbbcbaf8bccec6e",
+    "/share-humanity-bitkas/assets/AIDS.jpg": "e90c1f3abe4bce4d6bf76662ad3a83f34832b43a",
+    "/share-humanity-bitkas/assets/Ageing.jpg": "e89b7fd78bc40594b87c107ed1af1677a41a5605",
+    "/share-humanity-bitkas/assets/Hunger.jpg": "9bb1ea21822bf86af16713779d2ba93163206739",
+    "/share-humanity-bitkas/assets/climate_change2.jpg": "c31fe38087281286107bf5891a4dec44367bb357",
+    "/share-humanity-bitkas/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/share-humanity-bitkas/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/share-humanity-bitkas/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/share-humanity-bitkas/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/share-humanity-bitkas/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/share-humanity-bitkas/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/share-humanity-bitkas/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/share-humanity-bitkas/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/share-humanity-bitkas/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/share-humanity-bitkas/index.html": "5117832cf20b2df2651874fe7975f3857728cd59",
+    "/share-humanity-bitkas/main.669aa382a3f0f63017c4.js": "7f2007a307cc5ba02de72d5fd8752eb3faf1b15e",
+    "/share-humanity-bitkas/manifest.webmanifest": "14787a55e14aa7431f64ba31c5dbf4a6c6808c56",
+    "/share-humanity-bitkas/polyfills.bf99d438b005d57b2b31.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
+    "/share-humanity-bitkas/runtime.ed9d973e507d2f11f57e.js": "fa97d56472c29bf5f245e31d6cf024fe16376945",
+    "/share-humanity-bitkas/styles.4f7f096766fa7827ec3e.css": "b21b12a460b41dc04ffc5b15dc58d019a520be39"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
