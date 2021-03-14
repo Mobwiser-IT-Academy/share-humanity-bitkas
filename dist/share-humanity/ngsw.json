@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1615666575674,
+  "timestamp": 1615728178448,
   "index": "/share-humanity-bitkas/index.html",
   "assetGroups": [
     {
@@ -14,7 +14,7 @@
         "/share-humanity-bitkas/4.c42d0790d8d6c1ae55e2.js",
         "/share-humanity-bitkas/favicon.ico",
         "/share-humanity-bitkas/index.html",
-        "/share-humanity-bitkas/main.669aa382a3f0f63017c4.js",
+        "/share-humanity-bitkas/main.b16b2e14860909da2b63.js",
         "/share-humanity-bitkas/manifest.webmanifest",
         "/share-humanity-bitkas/polyfills.bf99d438b005d57b2b31.js",
         "/share-humanity-bitkas/runtime.ed9d973e507d2f11f57e.js",
@@ -62,8 +62,8 @@
     "/share-humanity-bitkas/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/share-humanity-bitkas/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/share-humanity-bitkas/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/share-humanity-bitkas/index.html": "5117832cf20b2df2651874fe7975f3857728cd59",
-    "/share-humanity-bitkas/main.669aa382a3f0f63017c4.js": "7f2007a307cc5ba02de72d5fd8752eb3faf1b15e",
+    "/share-humanity-bitkas/index.html": "1c2272c19cbdbe6c73a9550c8787cf6d6a1bd39e",
+    "/share-humanity-bitkas/main.b16b2e14860909da2b63.js": "e1068c9e74dbe9da70dd4ed38cca79539ba3c766",
     "/share-humanity-bitkas/manifest.webmanifest": "14787a55e14aa7431f64ba31c5dbf4a6c6808c56",
     "/share-humanity-bitkas/polyfills.bf99d438b005d57b2b31.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
     "/share-humanity-bitkas/runtime.ed9d973e507d2f11f57e.js": "fa97d56472c29bf5f245e31d6cf024fe16376945",
