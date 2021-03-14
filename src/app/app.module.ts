@@ -18,7 +18,8 @@ import {MatInputModule} from '@angular/material/input';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
-import { MatSnackBarModule } from '@angular/material/snack-bar'
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ServiceWorkerModule } from '@angular/service-worker'
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar'
     AngularFireStorageModule,
     MatProgressBarModule,
     MaterialFileInputModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent],

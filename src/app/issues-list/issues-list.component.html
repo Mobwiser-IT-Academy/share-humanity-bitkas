@@ -1,5 +1,5 @@
 <app-issues-filter (pedido) = "getIssue($event)"></app-issues-filter>
-  
+<div id="phoneDiv">
 <div id="unica">
 <div [@flyInOut]="'in'" *ngFor="let issue of items | async">
     <mat-card class="card" *ngIf="resolveIssues(pedido, issue)">
@@ -16,6 +16,6 @@
     
 </div>
 </div>
-
+</div>
 
 

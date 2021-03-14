@@ -20,5 +20,28 @@
     width: 100%;
     height: 250px;
   }
+
+  @media only screen and (max-width : 420px) {
+    body {
+      width: 100%;
+    }
+    
+    #unica {
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    mat-card {
+      width: 90%;
+    }
+
+    #phoneDiv {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
   
   
